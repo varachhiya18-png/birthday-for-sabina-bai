@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sabina Bai ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:linear-gradient(135deg,#ff4f8b,#ff8dc4,#ffd9ea);
+overflow:hidden;
+font-family:Poppins,sans-serif;
+text-align:center;
+color:white;
+}
+
+.container{
+z-index:10;
+padding:20px;
+}
+
+h1{
+font-size:55px;
+margin-bottom:15px;
+text-shadow:0 0 15px rgba(255,255,255,.7);
+}
+
+h2{
+font-size:30px;
+margin-bottom:20px;
+color:#fff7b2;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+max-width:700px;
+margin:auto;
+}
+
+.cake{
+font-size:120px;
+animation:bounce 2s infinite;
+margin:20px 0;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+#countdown{
+margin-top:25px;
+font-size:32px;
+font-weight:bold;
+}
+
+.balloon{
+position:absolute;
+bottom:-150px;
+font-size:45px;
+animation:fly 10s linear infinite;
+}
+
+@keyframes fly{
+0%{transform:translateY(0);}
+100%{transform:translateY(-130vh);}
+}
+
+footer{
+position:absolute;
+bottom:15px;
+width:100%;
+text-align:center;
+font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎉 Happy Birthday 🎉</h1>
+
+<h2>Sabina Bai ❤️</h2>
+
+<div class="cake">🎂</div>
+
+<p>
+
+May Allah fill your life with happiness,
+good health,
+peace,
+love,
+and endless success.
+
+Keep smiling forever.
+
+You will always be our beloved Sister.
+
+❤️
+
+</p>
+
+<div id="countdown"></div>
+
+</div>
+
+<div class="balloon" style="left:10%;">🎈</div>
+<div class="balloon" style="left:30%;animation-delay:2s;">🎈</div>
+<div class="balloon" style="left:50%;animation-delay:5s;">🎈</div>
+<div class="balloon" style="left:70%;animation-delay:1s;">🎈</div>
+<div class="balloon" style="left:90%;animation-delay:3s;">🎈</div>
+
+<footer>
+
+Made with ❤️ by Ahmad
+
+</footer>
+
+<script>
+
+const birthday=new Date("July 18, 2026 00:00:00").getTime();
+
+setInterval(()=>{
+
+const now=new Date().getTime();
+
+const gap=birthday-now;
+
+const d=Math.floor(gap/(1000*60*60*24));
+const h=Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+const m=Math.floor((gap%(1000*60*60))/60000);
+const s=Math.floor((gap%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML=
+"⏳ "+d+" Days "+h+" Hours "+m+" Minutes "+s+" Seconds";
+
+},1000);
+
+// Confetti
+setInterval(()=>{
+const conf=document.createElement("div");
+conf.innerHTML=["🎉","✨","❤️","🌸"][Math.floor(Math.random()*4)];
+conf.style.position="fixed";
+conf.style.left=Math.random()*100+"vw";
+conf.style.top="-30px";
+conf.style.fontSize="30px";
+conf.style.pointerEvents="none";
+document.body.appendChild(conf);
+
+let y=-30;
+
+const fall=setInterval(()=>{
+
+y+=4;
+
+conf.style.top=y+"px";
+
+if(y>window.innerHeight){
+
+clearInterval(fall);
+
+conf.remove();
+
+}
+
+},20);
+
+},300);
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
