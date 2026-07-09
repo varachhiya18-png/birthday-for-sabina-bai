@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For Sabina Bai ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+background:linear-gradient(135deg,#ff5f9e,#ff89c2,#ffd6ea);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.letter-card{
+max-width:850px;
+width:100%;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:25px;
+padding:40px;
+box-shadow:0 10px 35px rgba(0,0,0,.25);
+color:#fff;
+}
+
+h1{
+text-align:center;
+font-size:45px;
+margin-bottom:25px;
+color:#fff8b5;
+}
+
+#typing{
+font-size:20px;
+line-height:2;
+white-space:pre-wrap;
+min-height:380px;
+}
+
+.next{
+display:block;
+width:220px;
+margin:30px auto 0;
+text-align:center;
+padding:15px;
+background:#fff;
+color:#ff2d75;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.next:hover{
+transform:scale(1.05);
+}
+</style>
+
+</head>
+<body>
+
+<div class="letter-card">
+
+<h1>💌 A Special Letter</h1>
+
+<p id="typing"></p>
+
+<a href="celebrate.html" class="next">
+Final Surprise 🎉
+</a>
+
+</div>
+
+<script>
+
+const text=`Dear Sabina Bai ❤️,
+
+Aaj ka din bahut hi khaas hai, kyunki aaj ek bahut hi pyare aur nek dil insaan ka birthday hai.
+
+Aap sirf meri Bhabhi nahi,
+meri Sister ho.
+
+Aapki muskurahat ghar ko roshan kar deti hai.
+Aapki kindness aur pyar har kisi ke dil ko choo leta hai.
+
+Allah se meri dua hai ki woh aapko hamesha sehat, khushiyan, sukoon aur kamyabi se nawaze.
+
+Har sapna poora ho.
+Har dua qubool ho.
+Har din muskurahat se bhara ho.
+
+✨ Happy Birthday Sabina Bai ✨
+
+May Allah bless you always.
+
+With lots of respect and love,
+
+❤️ Your Brother
+Ahmad`;
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,35);
+
+}
+
+}
+
+type();
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
